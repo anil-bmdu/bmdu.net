@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Website Calculator
+        </a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+            Website Calculator
+        </button>
+      </p>
+      <div class="collapse show" id="collapseExample ">
+        <div class="card card-body">
+    <div class="web_doc_req">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+
+
+                    <form class="multisteps_form overflow-hidden position-relative" id="wizard" method="POST">
+
+
+                        <div class="multisteps_form_panel">
+                            <div class="row pt-3">
+                                <div class="col-md-12">
+                                    <div class="Question"> Are You Looking For?</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <ul class="text-center website_type_class">
+                                            <li class="position-relative step_1 d-inline-block">
+                                                <input id="static" type="radio" name="website_type"
+                                                    value="Static / Information">
+                                                <label for="static">Static / Information</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                            <li class="step_1 position-relative d-inline-block ">
+                                                <input id="dynamic" type="radio" name="website_type" value="Dynamic">
+                                                <label for="dynamic">Dynamic</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                            <li class="step_1 position-relative d-inline-block ">
+                                                <input id="corporate" type="radio" name="website_type"
+                                                    value="Corporate">
+                                                <label for="corporate">Corporate Website</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                            <li class="step_1 position-relative d-inline-block ">
+                                                <input id="one_page" type="radio" name="website_type" value="One page">
+                                                <label for="one_page">One Page Site</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                            <li class="step_1 position-relative d-inline-block ">
+                                                <input id="e_commerce" type="radio" name="website_type"
+                                                    value="E Commerce">
+                                                <label for="e_commerce">E-commerce</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row pt-3">
+                                <div class="col-md-12">
+                                    <div class="Question"> Number Of Pages</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <ul class="text-center page_type">
+                                            <li class="position-relative step_2 d-inline-block">
+                                                <input id="page_1_to_4" type="radio" name="page_type" value="4">
+                                                <label for="page_1_to_4">1 - 4</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                            <li class="step_2 position-relative d-inline-block ">
+                                                <input id="page_5_to_8" type="radio" name="page_type" value="8">
+                                                <label for="page_5_to_8">5 - 8</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                            <li class="step_2 position-relative d-inline-block ">
+                                                <input id="page_9_to_20" type="radio" name="page_type" value="20">
+                                                <label for="page_9_to_20">9 - 20</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                            <li class="step_2 position-relative d-inline-block ">
+                                                <input id="page_20_to_25" type="radio" name="page_type" value="25">
+                                                <label for="page_20_to_25">20 - 25</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                            <li class="step_2 position-relative d-inline-block ">
+                                                <input id="page_unlimited" type="radio" name="page_type" value="50">
+                                                <label for="page_unlimited">Unlimited</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row pt-3">
+                                <div class="col-md-4">
+                                    <div class="Question"> Do You Want Domain
+                                        <div class="popover-helpicon-main">
+                                            <div class="tooltip-ques"> <span class="popover-helpicon">?</span>
+                                                <span class="tooltiptext">
+
+                                                    <en>What is domain name and why it is needed?</en>
+
+                                                    <p>In general, a domain name identifies a network domain, or an
+                                                        Internet Protocol (IP) resource, such as a personal computer
+                                                        used to access the Internet, or a server computer. Domain names
+                                                        are often used to identify services provided through the
+                                                        Internet, such as websites and email services.</p>
+                                                    <p>For Example:-</p>
+                                                    <p>www.domainname.com
+                                                    <p>
+
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="">
+                                        <ul class="text-center domain_type">
+                                            <li class="position-relative step_1 d-inline-block">
+                                                <input id="domain_yes" type="radio" name="domain" value="Yes">
+                                                <label for="domain_yes">Yes</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="co_form">
+                                        <input type="text" name="domain_name" placeholder="Enter Your Domain Name">
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="Question"> Do You Want Hosting
+                                        <div class="popover-helpicon-main">
+                                            <div class="tooltip-ques"> <span class="popover-helpicon">?</span>
+                                                <span class="tooltiptext">
+
+                                                    <en> What is hosting used for? </en>
+                                                    <p>When a hosting provider allocates space on a web server for a
+                                                        website to stories its files, they
+                                                        are hosting a website. Web hosting <b>makes the files that
+                                                            comprise a website (code, images, etc.)
+                                                            available for viewing online.</b> Every website you've ever
+                                                        visited is hosted on a server. </p>
+
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="">
+                                        <ul class="text-center hosting_type">
+                                            <li class="position-relative step_1 d-inline-block">
+                                                <input id="hosting_yes" type="radio" name="hosting" value="Yes">
+                                                <label for="hosting_yes">Yes</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="co_form">
+                                        <input type="text" name="hosting_space" readonly class="red"
+                                            placeholder="Space As Per Need">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="Question">Do You Want Offical Email Ids
+                                        <div class="popover-helpicon-main">
+                                            <div class="tooltip-ques"> <span class="popover-helpicon">?</span>
+                                                <span class="tooltiptext">
+
+                                                    <en>what is Professional email id?<en>
+                                                            <p>A professional email address is the email address used
+                                                                for business communications, that is based on your
+                                                                custom domain. In other words, a professional email
+                                                                address is one that has your business name in it, in the
+                                                                form of a domain name.</p>
+                                                            <p>For Example:-</p>
+                                                            <p>info@domainname.com
+                                                            <p>
+
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="">
+                                        <ul class="text-center email_type">
+                                            <li class="position-relative step_1 d-inline-block">
+                                                <input id="email_yes" type="radio" name="email" value="Yes">
+                                                <label for="email_yes">Yes</label>
+                                                <span class="position-absolute"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="co_form" id="emailCount">
+                                        <label> Email </label>
+
+                                        <div class="qty">
+                                            <span class="minus bg-dark" id="minus">-</span>
+                                            <input type="number" id="email_count" class="count" name="qty" value="1">
+                                            <span class="plus bg-dark" id="plus">+</span>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row pt-3">
+                                <div class="col-md-12">
+                                    <div class="Question"> Pages Name
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <ul class="multiple_check" id="multiple_check">
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Home"> Home
+                                            </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="About Us">
+                                                About Us </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Contact Us">
+                                                Contact Us </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Services">
+                                                Services </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Career"> Career
+                                            </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Gallery">
+                                                Gallery </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Product">
+                                                Product </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]"
+                                                    value="Product Detail"> Product Detail </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Portfolio">
+                                                Portfolio </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Media"> Media
+                                            </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Testimonial">
+                                                Testimonial </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Clients">
+                                                Clients </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Enquiry">
+                                                Enquiry </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Get A Quote">
+                                                Get A Quote </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Blog"> Blog
+                                            </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Vision Page">
+                                                Vision Page </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Mission Page">
+                                                Mission Page </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Team"> Team
+                                            </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Faq's"> Faq's
+                                            </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="News"> News
+                                            </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Events"> Events
+                                            </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Awards"> Awards
+                                            </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Achievement">
+                                                Achievement </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="CSR"> CSR </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]"
+                                                    value="Terms & Conditions"> Terms & Conditions </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]"
+                                                    value="Privacy Policy"> Privacy Policy </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Refund Policy">
+                                                Refund Policy </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]"
+                                                    value="Cancellation Policy"> Cancellation Policy </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Studies">
+                                                Studies </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Industries">
+                                                Industries </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Site Map"> Site
+                                                Map </li>
+                                            <li> <input id="" type="checkbox" name="pages_name[]" value="Complaint">
+                                                Complaint </li>
+                                        </ul>
+                                        <input type="text" id="addPage" placeholder="Add New Page">
+                                        <span id="addMore"><i class="fa fa-plus"></i></span>
+                                        <span id="error_msg"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row pt-3">
+                                <div class="col-md-12">
+                                    <div class="respn">
+                                        <div class="Question"> Responsive</div>
+                                        <div class="co_form">
+
+                                            <input type="checkbox" class="checke" name="responsive" id="compulsory"
+                                                Value="1" checked>
+                                            <label> Compulsory </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                            <div class="row pt-3">
+                                <div class="col-md-12">
+                                    <div class="Question"> Special Requriment</div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <ul class="multiple_check Seo Sevv">
+                                            <li for="seo"> <input id="seo" type="checkbox" class="spereq"
+                                                    name="specialRequirment" price="5000" value="Seo Friendly"> Seo
+                                                Friendly </li>
+                                            <li> <input id="onPage" type="checkbox" class="spereq"
+                                                    name="specialRequirment" value="On Page Seo" price="2000"> On Page
+                                                Seo </li>
+
+                                            <li> <input id="socialMedia" type="checkbox" class="spereq"
+                                                    name="specialRequirment" price="500" value="Social Media Linking">
+                                                Social Media Linking
+                                                <span class="ques_mark"> ? </span>
+                                                <div class="Img_ho">
+                                                    <div class="tt">
+                                                        <img src="img/social-media.png">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li> <input id="popup" type="checkbox" class="spereq"
+                                                    name="specialRequirment" price="500" value="Popup Enquiry"> Popup
+                                                Enquiry </li>
+                                            <li> <input id="bannerDynamic" type="checkbox" class="spereq"
+                                                    name="specialRequirment" value="Banner Dynamic"> Banner Dynamic
+                                            </li>
+                                            <li> <input id="adminPanel" type="checkbox" class="spereq"
+                                                    name="specialRequirment" value="Admin Pannel"> Admin Pannel <span
+                                                    class="ques_mark"> ? </span>
+                                                <div class="Img_ho">
+                                                    <div class="tt">
+                                                        <img src="img/admin-panel.png">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li> <input id="editPage" type="checkbox" class="spereq"
+                                                    name="specialRequirment" value="Edit Pages"> Edit Pages </li>
+                                            <li> <input id="managePage" type="checkbox" class="spereq"
+                                                    name="specialRequirment" value="Manage Pages"> Manage Pages </li>
+                                            <li> <input id="contentWriting" type="checkbox" class="spereq"
+                                                    name="specialRequirment" price="500" value="Content Writing">
+                                                Content Writing </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row pt-3">
+                                <div class="col-md-12">
+                                    <div class="Question"> Special Requriment</div>
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <ul class="multiple_check Seo tiw_c Sevv">
+                                            <li> <input id="tawkLiveChat" type="checkbox" price="500"
+                                                    value="Tawk Live Chat"> Tawk Live Chat
+                                                <span class="ques_mark" id="tawk"> ? </span>
+                                                <div class="Img_ho" id="tawk1">
+                                                    <div class="tt">
+                                                        <img src="img/tawk.png">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li> <input id="googleMyBusiness" type="checkbox" price="500"
+                                                    value="Google My Bussiness Page"> Google My Bussiness Page
+                                                <span class="ques_mark"> ? </span>
+                                                <div class="Img_ho">
+                                                    <div class="tt">
+                                                        <img src="img/google-bussines.jpg">
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+                                            <li> <input id="whatsappChat" type="checkbox" price="500"
+                                                    value="Whatsapp Chat"> Whatsapp Chat
+                                                <span class="ques_mark"> ? </span>
+                                                <div class="Img_ho">
+                                                    <div class="tt">
+                                                        <img src="img/whatsapp_chat.jpg">
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li> <input id="callButton" type="checkbox" price="500" value="Call Button">
+                                                Call Button
+                                                <span class="ques_mark"> ? </span>
+                                                <div class="Img_ho">
+                                                    <div class="tt">
+                                                        <img src="img/Call-Now-Button.png">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li> <input id="paymentGateway" type="checkbox" price="5000"
+                                                    value="Payment Gateway"> Payment Gateway
+                                                <span class="ques_mark"> ? </span>
+                                                <div class="Img_ho">
+                                                    <div class="tt">
+                                                        <img src="img/payment.png">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li> <input id="smsApi" type="checkbox" price="5000" value="SMS API"> SMS
+                                                API
+                                                <span class="ques_mark"> ? </span>
+                                                <div class="Img_ho">
+                                                    <div class="tt">
+                                                        <img src="img/SMS-API-Blog.png">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li> <input id="professional_look" type="checkbox" price="10000"
+                                                    value="Professional Look"> Highly Professional Look
+                                                <span class="ques_mark"> ? </span>
+                                                <div class="Img_ho">
+                                                    <div class="tt">
+                                                        <img src="img/SMS-API-Blog.png">
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row pt-3">
+                                <div class="col-md-12">
+                                    <div class="Question"> Technology
+                                        <div class="popover-helpicon-main">
+                                            <div class="tooltip-ques"> <span class="popover-helpicon">?</span>
+                                                <span class="tooltiptext">
+
+                                                    <en>What is web technology? </en>
+                                                    <p>Web Technology refers to the various tools and techniques that
+                                                        are utilized in the process of communication between different
+                                                        types of devices over the internet. A web browser is used to
+                                                        access web pages. Web browsers can be defined as programs that
+                                                        display text, data, pictures, animation, and video on the
+                                                        Internet</p>
+
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <ul class="multiple_check tech">
+                                            <li> <input id="" type="radio" checked value="PHP"> PHP </li>
+                                            <li> <input id="" type="radio" checked value="HTML"> HTML </li>
+                                            <li> <input id="" type="radio" checked value="CSS"> CSS </li>
+                                            <li> <input id="" type="radio" checked value="JQUERY"> JQUERY </li>
+                                            <li> <input id="" type="radio" checked value="AJAX"> AJAX </li>
+                                            <li> <input id="" type="radio" checked value="JAVA SCRIPT"> JAVA SCRIPT
+                                            </li>
+                                            <li> <input id="" type="radio" checked value="MYSQL"> MYSQL </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row pt-3">
+                                <div class="col-md-8">
+                                    <div class="Question"> Extra Requirement
+                                    </div>
+                                    <textarea placeholder="Write here..." id="extra_requirement" Rows="6"></textarea>
+                                </div>
+
+
+                                <div class="col-md-4">
+                                    <div class="Question"> Attachment File <span class="add_mr"> Add more</span></div>
+
+
+                                    <div class="more_files">
+
+                                        <div class="File_atc">
+                                            <div class="file-upload btn btn-primary">
+                                                <span><i class="fa fa-cloud-upload"></i></span>
+                                                <input type="file" name="FileAttachment" id="FileAttachment"
+                                                    class="upload" />
+                                            </div>
+                                            <input type="text" id="fileuploadurl" readonly
+                                                placeholder="Maximum file size is 1GB">
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                        document.getElementById("FileAttachment").onchange = function () {
+                                            document.getElementById("fileuploadurl").value = this.value;
+                                        };
+                                    </script>
+
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+                    <div class="col-md-4 sticky_2">
+                        <div class="dc-container-box sticky-contents desktop_odr_s   ">
+                            <div class="shipping-items-details-section">
+                                <div>
+                                    <div class="heading prl20 open">Your order </div>
+                                </div>
+                                <div class="payment-details-container open">
+                                    <div class="cart-payment-details mrl20" id="your_order">
+
+                                        <div class="payment-details-tbl" id="looking_for" style="display:none;">
+                                            <div class="name"><img src="img/check.png"><span id="package_name">Static /
+                                                    Information</span></div>
+                                            <div class="value" id="package_price"><span
+                                                    id="website_type_status">0</span></div>
+                                        </div>
+
+
+
+                                        <div class="">
+                                            <div class="payment-details-tbl" id="no_of_page" style="display:none;">
+                                                <div class="name"><img src="img/check.png"><span id="page_type">No. of
+                                                        Pages </span></div>
+                                                <div class="value" id="package_price"><span
+                                                        id="page_type_status">0</span></div>
+                                            </div>
+                                            <div class="Full_pages">
+                                                <ul id="appendPages">
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="">
+                                            <div class="payment-details-tbl" id="no_of_added_on_page"
+                                                style="display:none;">
+                                                <div class="name"><img src="img/check.png"><span id="page_type">Add on
+                                                        Page <span id="add_ons_page"></span></span></div>
+                                                <div class="value" id="added_on_price"><span>0</span></div>
+                                            </div>
+                                            <div class="Full_pages">
+                                                <ul>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="do_you_domain" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png"><span
+                                                    id="domain_text">Domain</span></div>
+                                            <div class="value light-green"><span id="domain_type_status">0</span></div>
+                                        </div>
+
+                                        <div class="payment-details-tbl" id="do_you_hosting" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png"><span
+                                                    id="hosting_text">Hosting</span></div>
+                                            <div class="value light-green">
+                                                <span id="hosting_type_status">0</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="payment-details-tbl" id="do_you_emails" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png"><span
+                                                    id="emailids_text">Email Ids</span></div>
+                                            <div class="value light-green">
+                                                <span id="email_type_status">0</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="payment-details-tbl" id="responsive" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Responsive</div>
+                                            <div class="value light-green">
+                                                <span>Yes</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="payment-details-tbl" id="seo_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Seo</div>
+                                            <div class="value light-green">
+                                                <span id="seo_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="on_page_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">On Page</div>
+                                            <div class="value light-green">
+                                                <span id="on_page_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="social_media_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Social Media Linking
+                                            </div>
+                                            <div class="value light-green">
+                                                <span id="social_media_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="popup_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Popup Enquiry</div>
+                                            <div class="value light-green">
+                                                <span id="popup_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="banner_dynamic_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Banner Dynamic</div>
+                                            <div class="value light-green">
+                                                <span id="banner_dynamic_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="admin_panel_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Admin Panel</div>
+                                            <div class="value light-green">
+                                                <span id="seo_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="edit_page_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Edit Pages</div>
+                                            <div class="value light-green">
+                                                <span id="edit_page_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="manage_pages_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Manage pages</div>
+                                            <div class="value light-green">
+                                                <span id="manage_pages_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="content_writing_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Content Writing Per
+                                                Page</div>
+                                            <div class="value light-green">
+                                                <span id="content_writing_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="live_chat_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Tawk Live Chat</div>
+                                            <div class="value light-green">
+                                                <span id="live_chat_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="google_business_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Google My Business
+                                            </div>
+                                            <div class="value light-green">
+                                                <span id="google_business_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="whatsapp_chat_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Whatsapp Chat</div>
+                                            <div class="value light-green">
+                                                <span id="whatsapp_chat_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="call_button_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Call Button</div>
+                                            <div class="value light-green">
+                                                <span id="call_button_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="payment_gateway_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Payment Gateway</div>
+                                            <div class="value light-green">
+                                                <span id="payment_gateway_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="sms_api_box" style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">SMS Api</div>
+                                            <div class="value light-green">
+                                                <span id="sms_api_price">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details-tbl" id="professional_look_box"
+                                            style="display:none;">
+                                            <div class="name light-green"><img src="img/check.png">Highly Professional
+                                                Look</div>
+                                            <div class="value light-green">
+                                                <span id="professional_look_price">0</span>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div class="payment-details-tbl grand-total-cell prl20"
+                                        style="display:block !important">
+                                        <div class="name">Grand Total</div>
+                                        <div class="value fff">₹<span class="grandTotal">0</span>
+
+
+                                            <sp class="span_cla"> <i class="fa fa-plus" aria-hidden="true"></i> </sp>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="payment-details-tbl prl20 payment-reward-row"
+                                        style="display:block !important">
+                                        <button>Proceed To Pay</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="DownLoad_c">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal"> Download Quotation <i
+                                    class="fa fa-download" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="mObile_ordr ">
+            <div class="web_doc_req">
+                <div class="dc-container-box sticky-contents   ">
+
+                    <div class="shipping-items-details-section">
+                        <div class="payment-details-container open">
+                            <div class="cart-payment-details mrl20" id="mobile_order">
+
+                                <div class="payment-details-tbl" id="mobile_looking_for" style="display:none;">
+                                    <div class="name"><img src="img/check.png"><span id="mobile_package_name">Static /
+                                            Information</span></div>
+                                    <div class="value" id="mobile_package_price"><span
+                                            id="mobile_website_type_status">0</span></div>
+                                </div>
+
+
+
+                                <div class="">
+                                    <div class="payment-details-tbl" id="mobile_no_of_page" style="display:none;">
+                                        <div class="name"><img src="img/check.png"><span id="mobile_page_type">No. of
+                                                Pages </span></div>
+                                        <div class="value" id="mobile_package_price"><span
+                                                id="mobile_page_type_status">0</span></div>
+                                    </div>
+                                    <div class="Full_pages">
+                                        <ul id="mobile_appendPages">
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="">
+                                    <div class="payment-details-tbl" id="mobile_no_of_added_on_page"
+                                        style="display:none;">
+                                        <div class="name"><img src="img/check.png"><span id="mobile_page_type">Add on
+                                                Page <span id="mobile_add_ons_page"></span></span></div>
+                                        <div class="value" id="mobile_added_on_price"><span>0</span></div>
+                                    </div>
+                                    <div class="Full_pages">
+                                        <ul>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_do_you_domain" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png"><span
+                                            id="mobile_domain_text">Domain</span></div>
+                                    <div class="value light-green"><span id="mobile_domain_type_status">0</span></div>
+                                </div>
+
+                                <div class="payment-details-tbl" id="mobile_do_you_hosting" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png"><span
+                                            id="mobile_hosting_text">Hosting</span></div>
+                                    <div class="value light-green">
+                                        <span id="mobile_hosting_type_status">0</span>
+                                    </div>
+                                </div>
+
+                                <div class="payment-details-tbl" id="mobile_do_you_emails" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png"><span
+                                            id="mobile_emailids_text">Email Ids</span></div>
+                                    <div class="value light-green">
+                                        <span id="mobile_email_type_status">0</span>
+                                    </div>
+                                </div>
+
+                                <div class="payment-details-tbl" id="mobile_responsive" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Responsive</div>
+                                    <div class="value light-green">
+                                        <span>Yes</span>
+                                    </div>
+                                </div>
+
+                                <div class="payment-details-tbl" id="mobile_seo_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Seo</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_seo_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_on_page_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">On Page</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_on_page_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_social_media_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Social Media Linking</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_social_media_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_popup_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Popup Enquiry</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_popup_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_banner_dynamic_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Banner Dynamic</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_banner_dynamic_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_admin_panel_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Admin Panel</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_seo_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_edit_page_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Edit Pages</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_edit_page_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_manage_pages_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Manage pages</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_manage_pages_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_content_writing_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Content Writing Per Page
+                                    </div>
+                                    <div class="value light-green">
+                                        <span id="mobile_content_writing_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_live_chat_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Tawk Live Chat</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_live_chat_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_google_business_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Google My Business</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_google_business_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_whatsapp_chat_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Whatsapp Chat</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_whatsapp_chat_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_call_button_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Call Button</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_call_button_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_payment_gateway_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Payment Gateway</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_payment_gateway_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_sms_api_box" style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">SMS Api</div>
+                                    <div class="value light-green">
+                                        <span id="mobile_sms_api_price">0</span>
+                                    </div>
+                                </div>
+                                <div class="payment-details-tbl" id="mobile_professional_look_box"
+                                    style="display:none;">
+                                    <div class="name light-green"><img src="img/check.png">Highly Professional Look
+                                    </div>
+                                    <div class="value light-green">
+                                        <span id="mobile_professional_look_price">0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="payment-details-tbl grand-total-cell prl20" style="display:block !important">
+                                <div class="name">Grand Total</div>
+                                <div class="value fff">₹<span class="grandTotal">0</span>
+                                    <sp class="span_cla"> <i class="fa fa-plus" aria-hidden="true"></i> </sp>
+                                </div>
+                            </div>
+
+                            <div class="payment-details-tbl prl20 payment-reward-row" style=" gap: 7px;">
+
+
+
+                                <div class="DownLoad_c">
+                                    <button type="button" data-toggle="modal" data-target="#exampleModal" >  Download
+                                        Quotation <i class="fa fa-download" aria-hidden="true"></i></button>
+                                </div>
+                                <button>Proceed To Pay</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Download Your Quotation</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i
+                                        class="fa fa-user text-info"></i></div>
+                            </div>
+
+                            <input type="text" class="form-control" id="name"
+                             name="name" placeholder="Enter Your Name" required>
+                        </div>
+                        <span id="name_msg"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Email:</label>
+                      
+                      <input type="email" class="form-control" id="name"
+                      name="email" placeholder="Enter Your Email" required>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+</div>
+      </div>
+
+<div class="collapse " id="collapseExample1">
+
+Hello World
+
+
+</div>
+
+
+
+<!-- 
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!--  -->
+        <div class="downLoad_quota_tions">
+            <div class="modal fade " id="downLoad_quota_tion">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" >
+                            <a href="#" data-dismiss="modal" class="class pull-right"><span
+                                    class="fa fa-times"></span></a>
+                            <h3 class="modal-title">Download Your Quotation</h3>
+                        </div>
+                    </div>
+                   
+                   
+                    <div class="downLoad_quota_tions">
+                        <div  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">    <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a href="#" data-dismiss="modal" class="class pull-right"><span
+                                            class="fa fa-times"></span></a>
+                                    <h3 class="modal-title">Download Your Quotation</h3>
+                                </div>
+                                <div class="modal-body">
+
+                                    <form action="" method="POST" enctype="multipart/form-data">
+                                        <div class="card border-primary rounded-0">
+                                            <div class="card-body p-3">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text"><i
+                                                                            class="fa fa-user text-info"></i></div>
+                                                                </div>
+                                                                <input type="text" class="form-control" id="name"
+                                                                    name="name" placeholder="Enter Your Name" required>
+                                                            </div>
+                                                            <span id="name_msg"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text"><i
+                                                                            class="fa fa-envelope text-info"></i></div>
+                                                                </div>
+                                                                <input type="email" class="form-control" id="email"
+                                                                    name="email" placeholder="Enter Your Email"
+                                                                    required>
+                                                            </div>
+                                                            <span id="email_msg"></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text"><i
+                                                                            class="fa fa-phone text-info"></i></div>
+                                                                </div>
+                                                                <input type="text" class="form-control" id="phone"
+                                                                    name="phone" placeholder="Enter Your Phone"
+                                                                    required>
+                                                            </div>
+                                                            <span id="phone_msg"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group mb-2">
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text"><i
+                                                                            class="fa fa-map-marker text-info"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <input type="text" class="form-control" id="city"
+                                                                    name="city" placeholder="Enter Your City" required>
+                                                            </div>
+                                                            <span id="city_msg"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="text-center">
+                                                            <input type="submit" id="submit" name="submit"
+                                                                value="Submit" class="btn-block">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+
+</div>
+</div>
+
+
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ -->
+
+  
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script src="https://kit.fontawesome.com/fde11f0f1d.js" crossorigin="anonymous"></script>
+                <script src="javascript.js"></script>
+
+</body>
+
+</html>

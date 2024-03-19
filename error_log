@@ -1,0 +1,1 @@
+[04-Dec-2022 05:53:24 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 98570240 bytes) in /home1/amcrewmz/bmdu.net/application/controllers/BMDU.php on line 762

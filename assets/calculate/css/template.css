@@ -1,0 +1,30 @@
+#font-face{
+    font-style:italic;
+    font-weight: 500;
+    font-size: 25px;
+
+}
+#para{
+    font-size: 15px;
+}
+#para1{
+    font-size: 20px;
+}
+#para2{
+    font-size: 20px;
+}
+#top{
+    font-size: 25px;
+    background-color: rgb(27, 7, 76);
+}
+.table-bordered td, .table-bordered th{
+    border-color: black !important;
+    border: 2px solid black;
+}
+.change{
+    background-color:rgb(27, 7, 76);
+    color: aliceblue;
+}
+#red{
+    color: rgb(245, 66, 66);
+}
