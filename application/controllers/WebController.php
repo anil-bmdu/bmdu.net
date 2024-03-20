@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+use Dompdf\Dompdf;
 class WebController extends CI_Controller
 {
 
@@ -116,32 +117,53 @@ class WebController extends CI_Controller
             $otp = $_SESSION['otp'];
             $otp_time = $_SESSION['otp_time'];
             $entered_otp = $this->input->post('otp'); // Assuming the OTP is submitted via POST
-
+			// echo $this->input->post('email');exit;
             if ($entered_otp == $otp && (time() - $otp_time) <= (5 * 60)) {
                 // OTP verified, generate and save quotation
+				$this->data=$_SESSION['web_cal'];
+				echo "<pre>";
+			// print_r($this->data['email']);exit;
+				// $this->load->library('pdf');
                 $quotation_content = $this->load->view('web_calculate/quotation', '', TRUE); // Load the view containing your quotation content
                 $file_name = 'quotation_' . date('YmdHis') . '.pdf'; // Generate a unique file name
                 $file_path = FCPATH . 'uploads/' . $file_name; // File path where the quotation will be saved
                 file_put_contents($file_path, $quotation_content);
-				$config['protocol'] = 'smtp';
-				$config['smtp_host'] = 'mail.digitalutilization.com';
-				$config['smtp_user'] = 'contact@digitalutilization.com';
-				$config['smtp_pass'] = 'Jfj#0tn5';
-				$config['smtp_port'] = '2525';
-				$config['smtp_crypto'] = 'tls';
-				$config['mailtype'] = 'text or html';
-				$config['mailpath'] = '/usr/sbin/sendmail';
-				$config['charset'] = 'utf-8';
-				$config['wordwrap'] = TRUE;
-				$this->email->initialize($config);
+				// include_once( 'dompdf/autoload.inc.php' );
+				$this->load->library('pdf');
+				// Load the view file for the quotation content
+				$quotation_content = $this->load->view('web_calculate/quotation', '', TRUE);
+				// Set up the PDF
+				$dompdf = new Dompdf();
+				$dompdf->loadHtml($quotation_content);
+				// $dompdf->render();
+				// (Optional) Set paper size and orientation
+				$dompdf->setPaper('A4', 'portrait');
+				// Render the PDF
+				$output = $dompdf->output();
+				// Generate a unique file name
+				$file_name = 'quotation_' . date('YmdHis') . '.pdf';
+				// File path where the quotation will be saved
+				$file_path = FCPATH . 'uploads/' . $file_name;
+				// Save the generated PDF to a file
+				file_put_contents($file_path, $output);
+
+				
+				
 				$from_email = "contact@digitalutilization.com";
-				$to_email = "$email";
+				$to_email = $this->data['email'];
 				$this->email->from($from_email, 'BMDU.net');
 				$this->email->to($to_email);
-				$html_content = $file_path;
-				$this->email->subject('Your Quotation generated and saved');
-				$this->email->message('Your Quotation '.$html_content);
-
+				$this->email->subject('Quotation generated Success');
+				$this->email->message('Thank You. Your Submission has been Received.! We will be in touch and contact you within 24 hrs ');
+				$this->email->attach($file_path);
+				if ($this->email->send()) {
+					echo "<script>alert('Message send successfully',)
+							 </script>";
+							//  redirect('quo-otp');
+				} else {
+					echo "<script>alert('Message Not send!')
+						 </script>";
+				}
                 echo "<script>alert('OTP Verified. Quotation generated and saved.');
                       window.location.href='" . base_url('uploads/' . $file_name) . "'; // Redirect to the saved quotation file
                       </script>";

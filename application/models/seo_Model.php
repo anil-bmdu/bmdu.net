@@ -14,7 +14,10 @@ class seo_Model extends CI_Model{
                 return $q->result();
               
     }
-
+    public function seocount()
+    {
+        return $this->db->count_all('calc');
+    }
     public function delete_item($item_id) {
         // Assuming 'items' is the name of your table
         $this->db->where('id', $item_id);

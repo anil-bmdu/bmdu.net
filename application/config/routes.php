@@ -79,6 +79,7 @@ $route['retail'] = 'BMDU/retail';
 $route['about-us'] = 'BMDU/about';
 $route['seoCalc'] = 'seoController/seoCalc';
 $route['showCalc'] = 'seoController/showcalcData';
+$route['seo_de/(:any)']= 'seoController/seo_de/$1';
 $route['contact-us'] = 'BMDU/contact';
 $route['request'] = 'BMDU/request';
 $route['portfolio'] = 'BMDU/portfolio';
@@ -192,7 +193,7 @@ $route['create_blog'] = 'blogController/create_blog';
 $route['blog_create_code'] = 'blogController/blog_create_code';
 $route['blog-details'] = 'blogController/blog_details';
 $route['blog_de/(:any)']= 'blogController/blog_de/$1';
-$route['seo_de/(:any)']= 'seoController/seo_de/$1';
+
 $route['blog_update/(:any)']= 'blogController/blog_update/$1';
 $route['blog-update-code/(:any)']= 'blogController/blog_update_code/$1';
 

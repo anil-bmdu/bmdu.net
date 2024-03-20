@@ -64,6 +64,10 @@
                         <a href="<?php echo base_url('showCalc') ?>" class="text-decoration-none">
                             <h3 class="text-center text-light">SEO Details</h3>
                             <h4 class="text-center text-light">
+                                <?php
+                                    $rd=$this->seo_Model->seocount();
+                                    echo $rd;
+                                ?>
                             </h4>
                         </a>
                     </div>

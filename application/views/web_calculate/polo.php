@@ -699,7 +699,7 @@
                                                 </div>
 
 
-                                                <div class="payment-details-tbl grand-total-cell prl20" style="display:block !important">
+                                                <!-- <div class="payment-details-tbl grand-total-cell prl20" style="display:block !important">
                                                     <div class="name">Grand Total</div>
                                                     <div class="value fff">₹<span class="grandTotal">0</span>
 
@@ -707,16 +707,16 @@
                                                         <sp class="span_cla"> <i class="fa fa-plus" aria-hidden="true"></i> </sp>
 
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="Full_pages">
                                                 <ul id="appendPages">
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="payment-details-tbl prl20 payment-reward-row" style="display:block !important">
+                                        <!-- <div class="payment-details-tbl prl20 payment-reward-row" style="display:block !important">
                                             <button>Proceed To Pay</button>
-                                        </div>
+                                        </div> -->
 
                                     </div>
                                 </div>

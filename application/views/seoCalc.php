@@ -124,18 +124,17 @@
                                         <br>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="email" class="form-control" name="email" id="" value="<?php echo set_value("email") ?>" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com\.in)$" placeholder="Enter email" required><?php echo form_error('email'); ?><br>
-                                        <?php echo form_error('email'); ?>
+                                        <input type="email" class="form-control" name="email" id="emailInput" value="<?php echo set_value("email") ?>" placeholder="Enter email" required>
+                                        <span id="emailFeedback" style="color: red;"></span><br>
                                     </div>
                                     <div class="col-sm-6">
-                                        <!-- <input type="tel" class="form-control" name="number" id="" value="<?php echo set_value("number") ?>" placeholder="Enter Number" pattern="[6-9][0-9]{9}" oninput="validatePhoneNumber(this)" required><br> -->
-                                        <!-- <?php echo form_error('number'); ?> -->
                                         <input type="tel" class="form-control" id="phone1" style="width:100%" name="number" placeholder="" aria-label="company" autocomplete="off" required>
                                                     <!-- <span class="text-danger" id="output1"></span> -->
+                                                    <span id="phoneHelp" style="color:red;"></span>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" name="url" id="" value="<?php echo set_value("url") ?>" placeholder="Enter Website Url" required><br>
-                                        <?php echo form_error('url'); ?>
+                                        <input type="text" class="form-control" name="url" id="websiteUrl" oninput="validateUrl()" value="<?php echo set_value("url") ?>" placeholder="Enter Website Url" required>
+                                        <span id="urlMessage"></span><br>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" id="captchaInput" class="form-control" placeholder="Enter CAPTCHA code" required><br>
@@ -326,6 +325,76 @@
                 generateCaptcha();
             }
         }
+
+        function validateUrl() {
+        var urlInput = document.getElementById('websiteUrl').value;
+        // This regex checks for a basic URL format (http/https), it can be adjusted as needed for more specific cases
+        var regex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+        var message = document.getElementById('urlMessage');
+
+        if (regex.test(urlInput)) {
+            message.innerHTML = "Valid URL";
+            message.style.color = "green";
+        } else {
+            message.innerHTML = "Invalid URL";
+            message.style.color = "red";
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var phoneInput = document.getElementById('phone1');
+    var form = document.getElementById('phoneForm');
+    var helpText = document.getElementById('phoneHelp');
+    
+    // Validate phone number in real-time
+    phoneInput.addEventListener('input', function() {
+        validatePhoneNumber(this.value);
+    });
+
+    // Validate on form submit
+    form.addEventListener('submit', function(event) {
+        var isValid = validatePhoneNumber(phoneInput.value);
+        if (!isValid) {
+            event.preventDefault(); // Prevent form submission
+            alert("Please enter a valid phone number.");
+        }
+    });
+
+    function validatePhoneNumber(number) {
+        // Adjust the regex pattern to fit your needs
+        var regex = /^\+?\d{12}$/;
+        var isValid = regex.test(number);
+        helpText.textContent = isValid ? "" : "Invalid phone number format.";
+        return isValid;
+    }
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var emailInput = document.getElementById('emailInput');
+    var emailForm = document.getElementById('emailForm');
+    var emailFeedback = document.getElementById('emailFeedback');
+
+    // Validate email in real-time
+    emailInput.addEventListener('input', function() {
+        validateEmail(this.value);
+    });
+
+    // Validate on form submit
+    emailForm.addEventListener('submit', function(event) {
+        var isValid = validateEmail(emailInput.value);
+        if (!isValid) {
+            event.preventDefault(); // Prevent form submission
+            alert("Please enter a valid email address.");
+        }
+    });
+
+    function validateEmail(email) {
+        var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var isValid = regex.test(email);
+        emailFeedback.textContent = isValid ? "" : "Invalid email format.";
+        return isValid;
+    }
+});
+
 
 
       

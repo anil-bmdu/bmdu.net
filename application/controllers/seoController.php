@@ -3,16 +3,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class seoController extends CI_Controller {
 
+    public function __construct() {
+        parent::__construct();
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+    }
     public function seoCalc()
     {
-       
         $this->load->view('includes/header');
         $this->load->view('seoCalc');
         $this->load->view('includes/footer');
     }
     public function formSubmit()
 	{
-        
         $this->load->library('form_validation');
 		$this->load->database();
 	    $data = $this->input->post();
@@ -28,7 +31,7 @@ class seoController extends CI_Controller {
 		$this->form_validation->set_rules('numberOfBacklinks', "Phone Number", 'trim|required');
 		$this->form_validation->set_rules('levelOfOnPage', "Website Links", 'trim|required');
         $this->form_validation->set_rules('total', "Total Price", 'trim|required');
-		if (!$this->form_validation->run()) {
+		if ($this->form_validation->run() == FALSE) {
 			// echo "Validation Not work";
 			
             $this->session->set_flashdata('success_message', 'Please Enter Correct Entry!');
@@ -78,22 +81,7 @@ class seoController extends CI_Controller {
         $this->load->view('admin/includes/footer');
 
     }
-    // public function seo_de($id)
-    // {
-    //     echo "$id";
-    //     $item = $this->seo_Model->seo_de($id);
-       
-    //     if ($item) {
-    //         echo "<script>alert('Deleted Successfully!')
-    //                     window.location.href='http://localhost/manish/blog-details'
-    //             </script>";
-    //         // redirect('admin/index');
-    //     } else {
-    //         echo "<script>alert('Hey! sorry something went wrong.')
-    //                     window.location.href='http://localhost/manish/blog-details' 
-    //             </script>";
-    //     }
-    // }
+    
     public function seo_de($item_id) {
         // Call the delete_item method from the model
         $this->load->model('seo_Model');
