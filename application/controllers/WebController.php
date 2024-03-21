@@ -69,7 +69,7 @@ class WebController extends CI_Controller
 		$insert = $this->Web_Model->create3($web_cal);
 		if ($insert) {
 			$_SESSION['web_cal'] = $web_cal;
-			// echo $web_cal['email'];
+			// print_r($_SESSION['web_cal']);
 			// exit();
 			$name = $this->input->post('name');
 			$contact = $this->input->post('contact');
@@ -121,41 +121,35 @@ class WebController extends CI_Controller
             if ($entered_otp == $otp && (time() - $otp_time) <= (5 * 60)) {
                 // OTP verified, generate and save quotation
 				$this->data=$_SESSION['web_cal'];
-				echo "<pre>";
+				// echo "<pre>";
 			// print_r($this->data['email']);exit;
-				// $this->load->library('pdf');
+			
                 $quotation_content = $this->load->view('web_calculate/quotation', '', TRUE); // Load the view containing your quotation content
-                $file_name = 'quotation_' . date('YmdHis') . '.pdf'; // Generate a unique file name
+				// echo "$quotation_content";exit;
+				$file_name = 'quotation_' . date('YmdHis') . '.html'; // Generate a unique file name
                 $file_path = FCPATH . 'uploads/' . $file_name; // File path where the quotation will be saved
                 file_put_contents($file_path, $quotation_content);
-				// include_once( 'dompdf/autoload.inc.php' );
-				$this->load->library('pdf');
-				// Load the view file for the quotation content
-				$quotation_content = $this->load->view('web_calculate/quotation', '', TRUE);
-				// Set up the PDF
-				$dompdf = new Dompdf();
-				$dompdf->loadHtml($quotation_content);
-				// $dompdf->render();
-				// (Optional) Set paper size and orientation
-				$dompdf->setPaper('A4', 'portrait');
-				// Render the PDF
-				$output = $dompdf->output();
-				// Generate a unique file name
-				$file_name = 'quotation_' . date('YmdHis') . '.pdf';
-				// File path where the quotation will be saved
-				$file_path = FCPATH . 'uploads/' . $file_name;
-				// Save the generated PDF to a file
-				file_put_contents($file_path, $output);
-
-				
-				
 				$from_email = "contact@digitalutilization.com";
 				$to_email = $this->data['email'];
 				$this->email->from($from_email, 'BMDU.net');
 				$this->email->to($to_email);
-				$this->email->subject('Quotation generated Success');
+				$sub= "Quotation generated Success";
+				$this->email->subject($sub);
 				$this->email->message('Thank You. Your Submission has been Received.! We will be in touch and contact you within 24 hrs ');
 				$this->email->attach($file_path);
+				$user_data = array(
+					'name' => $this->data['name'],
+					'email' => $this->data['email'],
+					'phone'=> $this->data['phone'],
+					'city' => $this->data['city'],
+					'pdf'=> $file_name
+				  );
+				// print_r($user_data);
+				echo "<script>alert('OTP Verified. Quotation generated and saved.');
+				window.location.href='" . base_url('uploads/' . $file_name) . "'; // Redirect to the saved quotation file
+				</script>";
+				$this->load->model('Web_Model');
+				$this->Web_Model->create_webcal($user_data);
 				if ($this->email->send()) {
 					echo "<script>alert('Message send successfully',)
 							 </script>";
@@ -164,9 +158,7 @@ class WebController extends CI_Controller
 					echo "<script>alert('Message Not send!')
 						 </script>";
 				}
-                echo "<script>alert('OTP Verified. Quotation generated and saved.');
-                      window.location.href='" . base_url('uploads/' . $file_name) . "'; // Redirect to the saved quotation file
-                      </script>";
+               
             } elseif ($entered_otp != $otp) {
                 echo "<script>alert('Invalid OTP. Please try again');
                       window.location.href='" . site_url('quo-otp') . "'; // Redirect to the OTP page
@@ -182,5 +174,13 @@ class WebController extends CI_Controller
                   window.location.href='" . site_url('web_calculate') . "'; // Redirect to the calculation page
                   </script>";
         }
+	}
+
+	public function web_details()
+	{
+	    $web['web']=$this->Web_Model->Web_m();
+	    $this->load->view('admin/includes/header_dash');
+	    $this->load->view('admin/web-details',$web);
+	    $this->load->view('admin/includes/footer');
 	}
 }

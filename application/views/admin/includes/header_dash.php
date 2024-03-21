@@ -105,6 +105,9 @@ if (empty($var_ad['id'])) {
                 <li class="nav-item">
                     <a href="<?php echo base_url('showCalc') ?>" class="nav-link mx-3 text-light fs-4">SEO Calc</a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?php echo base_url('') ?>" class="nav-link mx-3 text-light fs-4">Web Calculate</a>
+                </li>
                 <!-- <li class = "nav-item">
                 <a href="<?php echo base_url('job') ?>" class="nav-link mx-3 text-light fs-4">Job Post</a>
                 </li> -->

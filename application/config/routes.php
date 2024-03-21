@@ -217,6 +217,8 @@ $route['hosting_type'] = 'WebController/hosting_type';
 $route['page_count'] = 'WebController/page_count';
 $route['page_type'] = 'WebController/page_type';
 $route['web_calculate_store'] = 'WebController/calculate_store';
+
+$route['web-details'] = 'WebController/web_details';
 /*download quotations */
 $route['quotation'] = 'WebController/quotation';
 $route['template'] = 'WebController/template';
